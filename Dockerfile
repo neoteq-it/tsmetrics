@@ -18,5 +18,5 @@ ENV HOME /root
 
 COPY --from=build /work/tsmetrics /tsmetrics
 
-ENTRYPOINT ["/tsmetrics"]
+ENTRYPOINT ["/tsmetrics" "--regular-server" "--wait-secs=240" "--tsnet-verbose" "--addr=:9100" "--resolve-names"]
 CMD []
